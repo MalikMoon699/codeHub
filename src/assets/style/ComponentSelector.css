@@ -10,6 +10,7 @@
   align-items: center;
   backdrop-filter: blur(4px);
   animation: fadeIn 0.3s ease;
+  padding: 5px;
   z-index: 999;
 }
 
@@ -20,6 +21,8 @@
   padding: 25px 30px;
   box-shadow: 0 10px 40px var(--shadowColor);
   animation: scaleIn 0.25s ease;
+  max-height: 90vh;
+  overflow: hidden auto;
 }
 
 .model-header {

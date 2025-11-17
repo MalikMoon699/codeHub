@@ -9,7 +9,11 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page-container">
-      <LandingHero ButtonClick={()=>{setIsStarted(true)}}/>
+      <LandingHero
+        ButtonClick={() => {
+          setIsStarted(true);
+        }}
+      />
       <section id="features" className="landing-page-features-section">
         <h2 className="landing-page-section-title">Core Features</h2>
         <div className="landing-page-features-grid">
@@ -90,7 +94,7 @@ const LandingPage = () => {
       )}
       <footer className="landing-page-footer">
         <p className="landing-page-footer-text">
-          © 2025 CodeHub — All Rights Reserved
+          © {new Date().getFullYear()} CodeHub — All Rights Reserved
         </p>
       </footer>
     </div>

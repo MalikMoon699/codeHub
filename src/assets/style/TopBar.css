@@ -89,7 +89,6 @@
   width: 100%;
 }
 
-
 .icon {
   font-size: 0px;
   cursor: pointer;
@@ -109,15 +108,41 @@
 
 .topbar-nav-btn {
   padding: 10px 20px;
-  background: #945ce9;
-  color: white;
+  background: var(--textColor);
+  color: var(--backGroundColor);
   border-radius: 8px;
   text-decoration: none;
   border: none;
   cursor: pointer;
+  white-space: nowrap;
   transition: 0.3s;
 }
 
 .topbar-nav-btn:hover {
   opacity: 0.85;
+}
+
+@media (max-width: 660px) {
+  .topbar-container {
+    padding: 10px 20px;
+  }
+  .brand {
+    font-size: 0px;
+  }
+  .brand > img {
+    margin: 0px;
+    width: 42px;
+  }
+  .topbar-right {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: end;
+  }
+  .topbar-right-nav-item {
+    font-size: 14px;
+  }
+  .topbar-nav-btn {
+    padding: 7px;
+    border-radius: 5px;
+  }
 }

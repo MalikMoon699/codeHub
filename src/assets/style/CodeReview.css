@@ -24,6 +24,7 @@
   padding: 15px 10px 10px 15px;
   margin-bottom: 15px;
   border-radius: 6px;
+  max-width: 90vw;
 }
 
 .ai-review-container pre {

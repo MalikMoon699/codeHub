@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ChevronLeft, Moon, Sun } from "lucide-react";
+import { ChevronLeft, Menu, Moon, Sun } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { IMAGES } from "../services/Constants";
 import "../assets/style/TopBar.css";
@@ -77,14 +77,14 @@ const TopBar = ({ darkMode, setDarkMode }) => {
           {darkMode ? <Sun /> : <Moon />}
         </span>
         {isLandingPage && (
-          <button
-            onClick={() => {
-              setIsStarted(true);
-            }}
-            className="topbar-nav-btn"
-          >
-            Get Started
-          </button>
+            <button
+              onClick={() => {
+                setIsStarted(true);
+              }}
+              className="topbar-nav-btn"
+            >
+              Get Started
+            </button>
         )}
       </div>
       {isStarted && (
