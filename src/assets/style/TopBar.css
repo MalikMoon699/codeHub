@@ -1,10 +1,33 @@
 .topbar-container {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--backGroundColor);
+  padding: 20px 60px;
+  border-bottom: 1px solid var(--borderColor);
+  z-index: 7;
+}
+
+.topbar-left {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 18px 28px;
-  background: var(--backGroundColor);
-  border-bottom: 1px solid var(--borderColor);
+  justify-content: start;
+}
+
+.topbar-back-btn {
+  background: var(--textBlindColor);
+  color: var(--textColor);
+  border: 1px solid transparent;
+  padding: 2px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 5px;
+}
+
+.topbar-back-btn:hover {
+  border-color: var(--textColor);
 }
 
 .brand {
@@ -13,8 +36,8 @@
   font-size: 20px;
   letter-spacing: 0.4px;
   border: 1px solid transparent;
-  padding-right: 6px;
-  border-radius: 4px;
+  padding: 3px 7px 4px 0px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -22,21 +45,50 @@
   transition: all 0.3s ease-in-out;
 }
 
-.brand:hover{
- border: 1px solid var(--textColor);
+.brand:hover {
+  border: 1px solid var(--textColor);
 }
 
 .brand > img {
   height: 70px;
   width: 100%;
   object-fit: cover;
-  margin: -15px;
+  margin: -15px -8px -15px -6px;
 }
 
 .topbar-right {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  gap: 25px;
 }
+
+.topbar-right-nav-item {
+  position: relative;
+  text-decoration: none;
+  color: var(--opositeColor);
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.topbar-right-nav-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #945ce9;
+  transition: width 0.3s ease;
+}
+
+.topbar-right-nav-item:hover {
+  color: #945ce9;
+}
+
+.topbar-right-nav-item:hover::before {
+  width: 100%;
+}
+
 
 .icon {
   font-size: 0px;
@@ -53,4 +105,19 @@
 
 .icon-btn:hover {
   transform: translateY(-2px);
+}
+
+.topbar-nav-btn {
+  padding: 10px 20px;
+  background: #945ce9;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.topbar-nav-btn:hover {
+  opacity: 0.85;
 }

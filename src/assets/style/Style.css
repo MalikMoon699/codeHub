@@ -2,22 +2,26 @@
   --codeColor: vs;
   --backGroundColor: #ffffff;
   --textColor: #945ce9;
+  --textBlindColor: #945ce921;
   --textsubColor: #a5a5a5;
   --borderColor: rgb(0 0 0 / 14%);
   --shadowColor: rgb(0 0 0 / 9%);
   --cardColor: #f9f7ff;
   --cardHoverColor: #e7e6ec;
+  --opositeColor: #000;
 }
 
 [data-theme="dark"] {
   --codeColor: vs-dark;
   --backGroundColor: #08080a;
   --textColor: #a978ea;
+  --textBlindColor: #945ce921;
   --textsubColor: #a5a5a5;
   --borderColor: rgba(255, 255, 255, 0.14);
   --shadowColor: rgba(255, 255, 255, 0.14);
   --cardColor: #141318;
   --cardHoverColor: #1d1b23;
+  --opositeColor: #fff;
 }
 
 * {
@@ -26,6 +30,7 @@
   box-sizing: border-box;
   scrollbar-width: none;
   font-family: "Arial", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {

@@ -1,10 +1,14 @@
-import React, { useEffect } from "react";
-import { Moon, Sun } from "lucide-react";
-import {useNavigate} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { ChevronLeft, Moon, Sun } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { IMAGES } from "../services/Constants";
 import "../assets/style/TopBar.css";
-import SiteLogo from "../assets/images/SiteLogo.png";
+import ComponentSelector from "./ComponentSelector";
 
 const TopBar = ({ darkMode, setDarkMode }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [isStarted, setIsStarted] = useState(false);
 
   useEffect(() => {
     const savedMode = localStorage.getItem("darkMode");
@@ -27,21 +31,43 @@ const TopBar = ({ darkMode, setDarkMode }) => {
     }
   }, [darkMode]);
 
+  const isLandingPage = location.pathname === "/";
+
   return (
-    <div className="topbar-container">
+    <header className="topbar-container">
       <div className="topbar-left">
+        {!isLandingPage && (
+          <button
+            onClick={() => navigate("/")}
+            className="icon topbar-back-btn"
+          >
+            <ChevronLeft />
+          </button>
+        )}
         <div
-          onClick={() => {
-            window.location.reload()
-          }}
           className="brand"
+          onClick={() => {
+            window.location.reload();
+          }}
         >
-          <img src={SiteLogo} />
-          GenUI
+          <img src={IMAGES.SiteLogo} />
+          CodeHub
         </div>
       </div>
-
       <div className="topbar-right">
+        {isLandingPage && (
+          <>
+            <a className="topbar-right-nav-item" href="#features">
+              Features
+            </a>
+            <a className="topbar-right-nav-item" href="#tools">
+              Tools
+            </a>
+            <a className="topbar-right-nav-item" href="#about">
+              About
+            </a>
+          </>
+        )}
         <span
           onClick={() => {
             setDarkMode(!darkMode);
@@ -50,8 +76,25 @@ const TopBar = ({ darkMode, setDarkMode }) => {
         >
           {darkMode ? <Sun /> : <Moon />}
         </span>
+        {isLandingPage && (
+          <button
+            onClick={() => {
+              setIsStarted(true);
+            }}
+            className="topbar-nav-btn"
+          >
+            Get Started
+          </button>
+        )}
       </div>
-    </div>
+      {isStarted && (
+        <ComponentSelector
+          onClose={() => {
+            setIsStarted(false);
+          }}
+        />
+      )}
+    </header>
   );
 };
 

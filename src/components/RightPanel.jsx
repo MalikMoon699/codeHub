@@ -130,7 +130,7 @@ const RightPanel = ({ response, setResponse, usedFramework }) => {
         <div className="full-preview-container">
           <div className="topbar-container">
             <div className="topbar-left">
-              <div className="brand">GenUI</div>
+              <div className="brand">CodeHub</div>
             </div>
 
             <div className="topbar-right">
