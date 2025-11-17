@@ -31,25 +31,6 @@ const ComponentSelector = ({ onClose }) => {
           <div
             onClick={() => {
               onClose();
-              navigate("/code-reviwer");
-            }}
-            className="model-option"
-          >
-            <div className="model-option-icon icon">
-              <Code2 />
-            </div>
-            <div className="model-option-info">
-              <h4>Code Reviewer</h4>
-              <p>
-                Analyze your code instantly with AI-powered insights, bug
-                detection and best-practice suggestions.
-              </p>
-            </div>
-          </div>
-
-          <div
-            onClick={() => {
-              onClose();
               navigate("/component-generator");
             }}
             className="model-option"
@@ -62,6 +43,24 @@ const ComponentSelector = ({ onClose }) => {
               <p>
                 Create beautiful, production-ready UI components in seconds
                 using smart generation tools.
+              </p>
+            </div>
+          </div>
+          <div
+            onClick={() => {
+              onClose();
+              navigate("/code-reviwer");
+            }}
+            className="model-option"
+          >
+            <div className="model-option-icon icon">
+              <Code2 />
+            </div>
+            <div className="model-option-info">
+              <h4>Code Reviewer</h4>
+              <p>
+                Analyze your code instantly with AI-powered insights, bug
+                detection and best-practice suggestions.
               </p>
             </div>
           </div>

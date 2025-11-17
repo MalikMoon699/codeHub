@@ -69,13 +69,13 @@
 /* ====== lnading Page ====== */
 .landing-page-container {
   font-family: "Poppins", sans-serif;
-  background: #f7f7fb;
-  color: #222;
+  background: var(--backGroundColor);
+  color: var(--textColor);
 }
 
 .landing-page-cta {
   background: var(--backGroundColor);
-  color: #945ce9;
+  color: var(--textColor);
   padding: 14px 32px;
   border-radius: 10px;
   font-size: 18px;
