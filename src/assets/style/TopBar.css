@@ -1,0 +1,56 @@
+.topbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  background: var(--backGroundColor);
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.brand {
+  color: var(--textColor);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.4px;
+  border: 1px solid transparent;
+  padding-right: 6px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.brand:hover{
+ border: 1px solid var(--textColor);
+}
+
+.brand > img {
+  height: 70px;
+  width: 100%;
+  object-fit: cover;
+  margin: -15px;
+}
+
+.topbar-right {
+  display: flex;
+  gap: 12px;
+}
+
+.icon {
+  font-size: 0px;
+  cursor: pointer;
+}
+
+.icon-btn {
+  padding: 4px;
+  border-radius: 10px;
+  background: var(--backGroundColor);
+  border: 1px solid var(--borderColor);
+  transition: transform 120ms ease;
+}
+
+.icon-btn:hover {
+  transform: translateY(-2px);
+}

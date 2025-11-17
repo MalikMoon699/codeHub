@@ -1,0 +1,124 @@
+.rightpanel-container {
+  flex: 1;
+  background: var(--cardColor);
+  border-radius: 16px;
+  border: 1px solid var(--borderColor);
+  box-shadow: 0 0 14px var(--shadowColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: -webkit-fill-available;
+}
+
+.rp-center {
+  text-align: center;
+}
+
+.rp-icon {
+  color: var(--textColor);
+  width: 80px;
+  height: 80px;
+  background: rgba(207, 163, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px auto;
+  border: 1px solid rgba(207, 163, 255, 0.25);
+}
+
+.rp-text {
+  color: var(--textsubColor);
+  font-size: 14px;
+}
+
+.rightpanel-code-container {
+  flex: 1;
+  background: var(--cardColor);
+  border-radius: 16px;
+  border: 1px solid var(--borderColor);
+  box-shadow: 0 0 14px var(--shadowColor);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  height: 100%;
+  overflow: auto;
+}
+
+.rightpanel-code-header {
+  background: var(--cardColor);
+  border-bottom: 1px solid var(--borderColor);
+  width: 100%;
+  padding: 8px 8px;
+  display: flex;
+  flex-direction: column;
+}
+.rightpanel-code-header-tabs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 15px auto;
+  background: var(--backGroundColor);
+  padding: 5px 0px;
+  border-radius: 20px;
+}
+
+.rightpanel-code-header-tab {
+  padding: 6px;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.rightpanel-code-header-tab-active {
+  position: absolute;
+  background-color: var(--borderColor);
+  padding: 15px;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+.rightpanel-code-header-tab-active.active-1 {
+  left: 2%;
+  width: 70px;
+}
+.rightpanel-code-header-tab-active.active-2 {
+  left: 68%;
+  width: 73px;
+}
+
+.rightpanel-code-header-inner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+.rightpanel-code-header-action-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--textColor);
+}
+
+.rightpanel-code-header-action-btns > button {
+  color: var(--textColor);
+}
+
+.rightpanel-preview-container {
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+}
+
+.full-preview-container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10000;
+  top: 0px;
+  left: 0px;
+  background-color: var(--backGroundColor);
+}
