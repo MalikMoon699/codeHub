@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "../assets/style/LandingPage.css";
-import { Link, Puzzle, Zap } from "lucide-react";
+import { Image, Puzzle, Zap } from "lucide-react";
 import ComponentSelector from "../components/ComponentSelector";
 import LandingHero from "../components/LandingHero";
+import { useNavigate } from "react-router";
 
 const LandingPage = () => {
   const [isStarted, setIsStarted] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="landing-page-container">
@@ -17,7 +19,12 @@ const LandingPage = () => {
       <section id="features" className="landing-page-features-section">
         <h2 className="landing-page-section-title">Core Features</h2>
         <div className="landing-page-features-grid">
-          <div className="landing-page-feature-card">
+          <div
+            className="landing-page-feature-card"
+            onClick={() => {
+              navigate("/code-reviwer");
+            }}
+          >
             <div className="landing-page-feature-icon">
               <Zap />
             </div>
@@ -27,7 +34,12 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className="landing-page-feature-card">
+          <div
+            className="landing-page-feature-card"
+            onClick={() => {
+              navigate("/component-generator");
+            }}
+          >
             <div className="landing-page-feature-icon">
               <Puzzle />
             </div>
@@ -37,13 +49,18 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className="landing-page-feature-card">
+          <div
+            className="landing-page-feature-card"
+            onClick={() => {
+              navigate("/image-generator");
+            }}
+          >
             <div className="landing-page-feature-icon">
-              <Link />
+              <Image />
             </div>
-            <h3 className="landing-page-feature-title">Hub Ecosystem</h3>
+            <h3 className="landing-page-feature-title">Image Generator</h3>
             <p className="landing-page-feature-text">
-              Centralized tools, smart workflows, and seamless integration.
+              Generate clean and reusable Image effortlessly.
             </p>
           </div>
         </div>
@@ -53,7 +70,7 @@ const LandingPage = () => {
 
         <div className="landing-page-tools-grid">
           <div className="landing-page-tool-card">
-            <h3 className="landing-page-tool-title">Live Code Reviewer</h3>
+            <h3 className="landing-page-tool-title">Code Reviewer</h3>
             <p className="landing-page-tool-text">
               Analyze your code in real-time with smart AI-powered suggestions.
             </p>
@@ -67,9 +84,9 @@ const LandingPage = () => {
           </div>
 
           <div className="landing-page-tool-card">
-            <h3 className="landing-page-tool-title">Performance Optimizer</h3>
+            <h3 className="landing-page-tool-title">Image Generator</h3>
             <p className="landing-page-tool-text">
-              Improve speed, reduce complexity, and enhance your codebase.
+              Generate clean, reusable Image instantly.
             </p>
           </div>
         </div>
@@ -80,8 +97,8 @@ const LandingPage = () => {
           <p className="landing-page-about-text">
             CodeHub is an all-in-one platform built for developers to speed up
             workflows, improve code quality, and generate production-ready UI
-            components effortlessly. Our mission is to empower creators with
-            tools that save time and boost creativity.
+            components & Images effortlessly. Our mission is to empower creators
+            with tools that save time and boost creativity.
           </p>
         </div>
       </section>

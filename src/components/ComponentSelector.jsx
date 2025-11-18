@@ -1,5 +1,5 @@
 import React from "react";
-import { X, Code2, Shapes } from "lucide-react";
+import { X, Code2, Shapes, ImageIcon } from "lucide-react";
 import "../assets/style/ComponentSelector.css";
 import { useNavigate } from "react-router";
 
@@ -43,6 +43,24 @@ const ComponentSelector = ({ onClose }) => {
               <p>
                 Create beautiful, production-ready UI components in seconds
                 using smart generation tools.
+              </p>
+            </div>
+          </div>
+          <div
+            onClick={() => {
+              onClose();
+              navigate("/image-generator");
+            }}
+            className="model-option"
+          >
+            <div className="model-option-icon icon">
+              <ImageIcon />
+            </div>
+            <div className="model-option-info">
+              <h4>Image Generator</h4>
+              <p>
+                Generate high-quality images using AI — perfect for UI assets,
+                illustrations or creative visuals.
               </p>
             </div>
           </div>

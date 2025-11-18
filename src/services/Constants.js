@@ -2,12 +2,14 @@ import SiteLogo from "../assets/images/SiteLogo.png";
 import slideImage1 from "../assets/images/slideImage1.jpeg";
 import slideImage2 from "../assets/images/slideImage2.webp";
 import slideImage3 from "../assets/images/slideImage3.jpg";
+import GenPlaceHolder from "../assets/images/GenratePlaceHolder.jpg";
 
 export const IMAGES = {
   SiteLogo,
   slideImage1,
   slideImage2,
   slideImage3,
+  GenPlaceHolder,
 };
 
 export const landingHeroSlides = [
@@ -78,5 +80,36 @@ Strict Requirements:
    - **Suggestions:** Specific improvements
    - **Summary:** Overall quality evaluation
 6. **Return ONLY the structured review, nothing else.**
+`;
+};
+
+export const ImagePromptGenerator = (baseIdea) => {
+  return `
+You are an expert AI prompt engineer specialized in generating high-quality, detailed, and creative prompts for AI image generation.  
+
+User Base Idea: "${baseIdea}"
+
+Your task:
+Generate a minimum of 3 unique, detailed, and creative prompts for AI image generation based on the user idea.  
+Each prompt should include:
+- Artistic style (realistic, cinematic, digital art, watercolor, etc.)
+- Mood or atmosphere (sunset, futuristic, dramatic, serene, etc.)
+- Composition details (close-up, wide shot, aerial view, perspective, etc.)
+- Colors, lighting, and special effects
+- Any creative elements that enhance visual appeal
+
+Requirements:
+1. Provide **at least 5 prompts**, each on a new line.
+2. Do not repeat ideas; each prompt must be unique.
+3. Return ONLY the list of prompts, without explanations or extra text.
+
+Example output for base idea "sunrise":
+1. "A stunning sunrise over misty mountains, golden light reflecting on the river, realistic style, cinematic composition"
+2. "Digital art of a sunrise at the beach, soft pastel colors, gentle waves, peaceful atmosphere"
+3. "Futuristic city skyline at sunrise, glowing neon lights, aerial perspective, dramatic clouds"
+4. "Watercolor painting of a sunrise in a forest, sun rays filtering through trees, soft warm colors"
+5. "Sunrise over a desert landscape, sand dunes illuminated by warm light, cinematic wide shot"
+
+Generate similar high-quality prompts for the user idea: "${baseIdea}".
 `;
 };

@@ -46,6 +46,19 @@
   border-color: rgba(207, 163, 255, 0.4);
 }
 
+.lp-input {
+  background: var(--backGroundColor);
+  color: var(--textColor);
+  border-radius: 12px;
+  padding: 14px;
+  border: 1px solid var(--borderColor);
+  outline: 0;
+  font-size: 14px;
+}
+
+.lp-input:focus {
+  border-color: rgba(207, 163, 255, 0.5);
+}
 .lp-textarea {
   background: var(--backGroundColor);
   color: var(--textColor);

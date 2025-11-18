@@ -110,9 +110,17 @@
 
 .landing-page-feature-card {
   padding: 30px;
+   border-top: 0px solid var(--textColor);
   background: var(--cardColor);
+  cursor: pointer;
   border-radius: 16px;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.landing-page-feature-card:hover{
+  transform: translateY(2px);
+  border-top: 4px solid var(--textColor);
 }
 
 .landing-page-feature-icon {
