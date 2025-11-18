@@ -47,7 +47,12 @@ const TopBar = ({ darkMode, setDarkMode }) => {
         <div
           className="brand"
           onClick={() => {
-            window.location.reload();
+            if (isLandingPage) {
+              navigate("/");
+              window.location.reload();
+            } else {
+              window.location.reload();
+            }
           }}
         >
           <img src={IMAGES.SiteLogo} />

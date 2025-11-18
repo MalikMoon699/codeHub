@@ -165,7 +165,7 @@ const LandingPage = () => {
 
         <div className="faq-item">
           <h4>Is CodeHub free to use?</h4>
-          <p>Yes! You can use the basic tools without any cost.</p>
+          <p>Yes! You can use our all tools without any cost.</p>
         </div>
 
         <div className="faq-item">

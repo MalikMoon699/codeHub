@@ -11,7 +11,8 @@
   bottom: 25px;
   border: 1px solid var(--textColor);
   font-size: 0px;
-  background: var(--cardColor);
+  background: var(--opositeColor);
+  /* background: var(--cardColor); */
   color: var(--textColor);
   cursor: pointer;
   z-index: 16;
@@ -40,4 +41,15 @@
   gap: 10px;
   width: 100%;
   color: var(--opositeColor);
+}
+
+.ai-review-container pre > .code-header > span {
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.ai-review-container pre > .code-header > span:hover {
+  background-color: #8a44f2;
 }

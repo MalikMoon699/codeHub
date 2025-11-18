@@ -26,7 +26,7 @@ export const FormatResponse = ({ text }) => {
             return !inline && match ? (
               <>
                 <div className="code-header">
-                  <strong>Code</strong>
+                  <strong>CodeHub</strong>
                   <span onClick={() => handleCopy(String(children))}>
                     <Copy size={15} />
                     Copy

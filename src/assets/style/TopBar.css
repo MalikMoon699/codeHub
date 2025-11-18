@@ -7,7 +7,7 @@
   background-color: var(--backGroundColor);
   padding: 20px 60px;
   border-bottom: 1px solid var(--borderColor);
-  z-index: 7;
+  z-index: 12;
 }
 
 .topbar-left {
