@@ -60,8 +60,20 @@ const TopBar = ({ darkMode, setDarkMode }) => {
             <a className="topbar-right-nav-item" href="#features">
               Features
             </a>
+            <a className="topbar-right-nav-item" href="#workflow">
+              Workflow
+            </a>
+            <a className="topbar-right-nav-item" href="#why">
+              Why choose
+            </a>
             <a className="topbar-right-nav-item" href="#tools">
               Tools
+            </a>
+            <a className="topbar-right-nav-item" href="#testimonials">
+              testimonials
+            </a>
+            <a className="topbar-right-nav-item" href="#faq">
+              faq
             </a>
             <a className="topbar-right-nav-item" href="#about">
               About
@@ -77,14 +89,14 @@ const TopBar = ({ darkMode, setDarkMode }) => {
           {darkMode ? <Sun /> : <Moon />}
         </span>
         {isLandingPage && (
-            <button
-              onClick={() => {
-                setIsStarted(true);
-              }}
-              className="topbar-nav-btn"
-            >
-              Get Started
-            </button>
+          <button
+            onClick={() => {
+              setIsStarted(true);
+            }}
+            className="topbar-nav-btn"
+          >
+            Get Started
+          </button>
         )}
       </div>
       {isStarted && (

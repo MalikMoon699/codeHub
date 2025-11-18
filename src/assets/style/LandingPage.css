@@ -110,7 +110,7 @@
 
 .landing-page-feature-card {
   padding: 30px;
-   border-top: 0px solid var(--textColor);
+  border-top: 0px solid var(--textColor);
   background: var(--cardColor);
   cursor: pointer;
   border-radius: 16px;
@@ -118,7 +118,7 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 
-.landing-page-feature-card:hover{
+.landing-page-feature-card:hover {
   transform: translateY(2px);
   border-top: 4px solid var(--textColor);
 }
@@ -167,7 +167,7 @@
 .landing-page-tool-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 28px var(--shadowColor);
-} 
+}
 
 .landing-page-tool-title {
   font-size: 22px;
@@ -177,6 +177,174 @@
 }
 
 .landing-page-tool-text {
+  font-size: 15px;
+  color: var(--textsubColor);
+  line-height: 1.6;
+}
+
+.landing-page-why-section {
+  padding: 100px 20px;
+  background: var(--backGroundColor);
+  text-align: center;
+}
+
+.landing-page-why-grid {
+  margin-top: 50px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.landing-page-why-card {
+  background: var(--cardColor);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px var(--shadowColor);
+  transition: 0.3s ease;
+  border-top: 4px solid transparent;
+}
+
+.landing-page-why-card:hover {
+  transform: translateY(-4px);
+  border-top: 4px solid var(--textColor);
+  box-shadow: 0 10px 28px var(--shadowColor);
+}
+
+.landing-page-why-card h3 {
+  font-size: 22px;
+  color: var(--opositeColor);
+  margin-bottom: 10px;
+}
+
+.landing-page-why-card p {
+  font-size: 15px;
+  color: var(--textsubColor);
+  line-height: 1.6;
+}
+
+.landing-page-workflow-section {
+  padding: 100px 20px;
+  text-align: center;
+  background: var(--backGroundColor);
+}
+
+.landing-page-workflow-steps {
+  margin-top: 50px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.workflow-step {
+  background: var(--cardColor);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px var(--shadowColor);
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.workflow-step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px var(--shadowColor);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: var(--textColor);
+  color: var(--backGroundColor);
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.workflow-step h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--opositeColor);
+}
+
+.workflow-step p {
+  font-size: 15px;
+  color: var(--textsubColor);
+  line-height: 1.6;
+}
+
+.landing-page-testimonial-section {
+  padding: 100px 20px;
+  text-align: center;
+  background: var(--backGroundColor);
+}
+
+.landing-page-testimonial-grid {
+  margin-top: 50px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.testimonial-card {
+  background: var(--cardColor);
+  padding: 30px;
+  border-radius: 16px;
+  font-style: italic;
+  box-shadow: 0 6px 20px var(--shadowColor);
+  transition: 0.3s ease;
+  border-left: 4px solid var(--textColor);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px var(--shadowColor);
+}
+
+.testimonial-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  color: var(--opositeColor);
+}
+
+.testimonial-card p {
+  font-size: 15px;
+  color: var(--textsubColor);
+  line-height: 1.7;
+}
+
+.landing-page-faq-section {
+  padding: 100px 20px;
+  background: var(--backGroundColor);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--cardColor);
+  padding: 25px 30px;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px var(--shadowColor);
+  transition: 0.3s ease;
+  border-left: 4px solid var(--textColor);
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px var(--shadowColor);
+}
+
+.faq-item h4 {
+  font-size: 20px;
+  color: var(--opositeColor);
+  margin-bottom: 8px;
+}
+
+.faq-item p {
   font-size: 15px;
   color: var(--textsubColor);
   line-height: 1.6;

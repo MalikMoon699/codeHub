@@ -59,12 +59,14 @@
 .topbar-right {
   display: flex;
   align-items: center;
+    flex-wrap: wrap;
   gap: 25px;
 }
 
 .topbar-right-nav-item {
   position: relative;
   text-decoration: none;
+  white-space: nowrap;
   color: var(--opositeColor);
   font-size: 16px;
   transition: color 0.3s;
@@ -121,6 +123,10 @@
 .topbar-nav-btn:hover {
   opacity: 0.85;
 }
+
+@media (max-width: 1000px) {  .brand {
+    font-size: 0px;
+  }}
 
 @media (max-width: 660px) {
   .topbar-container {

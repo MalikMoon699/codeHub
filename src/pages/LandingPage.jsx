@@ -65,6 +65,52 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+      <section id="workflow" className="landing-page-workflow-section">
+        <h2 className="landing-page-section-title">How It Works</h2>
+
+        <div className="landing-page-workflow-steps">
+          <div className="workflow-step">
+            <div className="step-number">1</div>
+            <h4>Choose Your Tool</h4>
+            <p>
+              Select from Code Review, Component Generator, or Image Generator.
+            </p>
+          </div>
+          <div className="workflow-step">
+            <div className="step-number">2</div>
+            <h4>Describe Your Needs</h4>
+            <p>Provide code, UI details, or image prompts.</p>
+          </div>
+          <div className="workflow-step">
+            <div className="step-number">3</div>
+            <h4>Get Instant Output</h4>
+            <p>Receive optimized, clean, and reusable results instantly.</p>
+          </div>
+        </div>
+      </section>
+      <section id="why" className="landing-page-why-section">
+        <h2 className="landing-page-section-title">Why Choose CodeHub?</h2>
+
+        <div className="landing-page-why-grid">
+          <div className="landing-page-why-card">
+            <h3>Boost Productivity</h3>
+            <p>
+              Save hours every week with AI-assisted automation for common dev
+              tasks.
+            </p>
+          </div>
+          <div className="landing-page-why-card">
+            <h3>Clean, Reusable Output</h3>
+            <p>Get production-ready UI components and images instantly.</p>
+          </div>
+          <div className="landing-page-why-card">
+            <h3>Developer Friendly</h3>
+            <p>
+              Built with modern UX to make your workflow smooth and intuitive.
+            </p>
+          </div>
+        </div>
+      </section>
       <section id="tools" className="landing-page-tools-section">
         <h2 className="landing-page-section-title">Developer Tools</h2>
 
@@ -89,6 +135,47 @@ const LandingPage = () => {
               Generate clean, reusable Image instantly.
             </p>
           </div>
+        </div>
+      </section>
+      <section id="testimonials" className="landing-page-testimonial-section">
+        <h2 className="landing-page-section-title">What Developers Say</h2>
+
+        <div className="landing-page-testimonial-grid">
+          <div className="testimonial-card">
+            <p>
+              “CodeHub saved me countless hours—its code review is insanely
+              accurate.”
+            </p>
+            <h4>— Ali R., Frontend Engineer</h4>
+          </div>
+          <div className="testimonial-card">
+            <p>“Component Generator is a life saver for rapid prototyping!”</p>
+            <h4>— Sana M., UI/UX Designer</h4>
+          </div>
+          <div className="testimonial-card">
+            <p>“The Image Generator blows my mind. Clean output every time.”</p>
+            <h4>— Zain Tech, Software Builder</h4>
+          </div>
+        </div>
+      </section>
+      <section id="faq" className="landing-page-faq-section">
+        <h2 className="landing-page-section-title">
+          Frequently Asked Questions
+        </h2>
+
+        <div className="faq-item">
+          <h4>Is CodeHub free to use?</h4>
+          <p>Yes! You can use the basic tools without any cost.</p>
+        </div>
+
+        <div className="faq-item">
+          <h4>Can I export generated components?</h4>
+          <p>Absolutely — all outputs are copy-ready and framework-friendly.</p>
+        </div>
+
+        <div className="faq-item">
+          <h4>Does CodeHub support dark mode?</h4>
+          <p>Yes, the entire app adapts to your theme preferences.</p>
         </div>
       </section>
       <section id="about" className="landing-page-about-section">
