@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { ChevronLeft, Menu, Moon, Sun } from "lucide-react";
+import {
+  ChevronLeft,
+  Moon,
+  Sun,
+  // Menu,
+  // Monitor,
+  // Smartphone,
+  // Tablet,
+} from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { IMAGES } from "../services/Constants";
 import "../assets/style/TopBar.css";
@@ -9,6 +17,8 @@ const TopBar = ({ darkMode, setDarkMode }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isStarted, setIsStarted] = useState(false);
+  // const [deviceMode, setDeviceMode] = useState(false);
+  // const [devicetype, setDeviceType] = useState("pc");
 
   useEffect(() => {
     const savedMode = localStorage.getItem("darkMode");
@@ -30,6 +40,45 @@ const TopBar = ({ darkMode, setDarkMode }) => {
       localStorage.setItem("darkMode", "false");
     }
   }, [darkMode]);
+
+  // useEffect(() => {
+  //   const updateDeviceType = () => {
+  //     const width = window.innerWidth;
+  //     if (width >= 1024) {
+  //       setDeviceType("pc");
+  //     } else if (width >= 768) {
+  //       setDeviceType("tablet");
+  //     } else {
+  //       setDeviceType("mobile");
+  //     }
+  //   };
+
+  //   updateDeviceType();
+  //   window.addEventListener("resize", updateDeviceType);
+
+  //   return () => window.removeEventListener("resize", updateDeviceType);
+  // }, []);
+
+  // useEffect(() => {
+  //   const prefersDark = window.matchMedia(
+  //     "(prefers-color-scheme: dark)"
+  //   ).matches;
+  //   setDeviceMode(prefersDark);
+
+  //   const listener = (e) => {
+  //     setDeviceMode(e.matches);
+  //   };
+
+  //   const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  //   mediaQuery.addEventListener("change", listener);
+
+  //   return () => {
+  //     mediaQuery.removeEventListener("change", listener);
+  //   };
+  // }, []);
+
+  // console.log("devicetype--->", devicetype);
+  // console.log("deviceMode--->", deviceMode);
 
   const isLandingPage = location.pathname === "/";
 
@@ -93,6 +142,16 @@ const TopBar = ({ darkMode, setDarkMode }) => {
         >
           {darkMode ? <Sun /> : <Moon />}
         </span>
+        {/* <span onClick={() => setDarkMode(deviceMode)} className="icon icon-btn">
+          {devicetype === "pc" ? (
+            <Monitor />
+          ) : devicetype === "tablet" ? (
+            <Tablet />
+          ) : (
+            <Smartphone />
+          )}
+        </span> */}
+
         {isLandingPage && (
           <button
             onClick={() => {
