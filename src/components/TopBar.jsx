@@ -99,6 +99,10 @@ const TopBar = ({ darkMode, setDarkMode }) => {
             if (isLandingPage) {
               navigate("/");
               window.location.reload();
+              window.history.scrollRestoration = "manual";
+              setTimeout(() => {
+                window.scrollTo(0, 0);
+              }, 300);
             } else {
               window.location.reload();
             }
